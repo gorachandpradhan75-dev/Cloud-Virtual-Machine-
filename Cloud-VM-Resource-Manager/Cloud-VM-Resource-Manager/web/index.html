@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cloud VM Resource Manager</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><aside class="sidebar"><div class="brand"><span class="brand-icon">☁</span><div><b>CloudSphere</b><small>VM RESOURCE MANAGER</small></div></div>
+<nav><a class="active" href="/">▦ &nbsp; Overview</a><a href="#inventory">▣ &nbsp; Virtual Machines</a><a href="#insights">✦ &nbsp; AI Insights</a><a href="#architecture">⌘ &nbsp; Architecture</a></nav>
+<div class="side-note"><span class="dot"></span> Demo environment<br><small>Local VM simulation</small></div></aside>
+<main><header><div><p class="eyebrow">CLOUD INFRASTRUCTURE / OVERVIEW</p><h1>Virtual Machine Dashboard</h1><p class="sub">Monitor, manage and optimize your virtual infrastructure.</p></div><div class="header-right"><span class="live"><i></i> LIVE SIMULATION</span><button class="primary" onclick="openModal()">＋ Add VM</button></div></header>
+<section class="stats">
+<div class="stat"><div class="stat-top"><span>Total Virtual Machines</span><b>▣</b></div><strong id="total">—</strong><small>Registered instances</small></div>
+<div class="stat"><div class="stat-top"><span>Running</span><b class="green">●</b></div><strong id="running">—</strong><small>Active instances</small></div>
+<div class="stat"><div class="stat-top"><span>Stopped</span><b class="muted">◼</b></div><strong id="stopped">—</strong><small>Inactive instances</small></div>
+<div class="stat"><div class="stat-top"><span>Average CPU Usage</span><b class="purple">⌁</b></div><strong id="avgcpu">—</strong><small>Across running VMs</small></div>
+</section>
+<section class="panel" id="inventory"><div class="panel-head"><div><h2>Virtual Machine Inventory</h2><p>Manage the lifecycle and resource allocation of your instances.</p></div><span class="count" id="count">0 instances</span></div>
+<div class="table-wrap"><table><thead><tr><th>INSTANCE</th><th>CONFIGURATION</th><th>CPU USAGE</th><th>RAM USAGE</th><th>STATUS</th><th>ACTIONS</th></tr></thead><tbody id="vmrows"></tbody></table></div></section>
+<section class="lower"><div class="panel" id="insights"><div class="panel-head"><div><h2>Optimization Insights</h2><p>Rule-based recommendations from current simulated metrics.</p></div><span class="spark">✦</span></div><div id="insight-list" class="insights"></div></div>
+<div class="panel" id="architecture"><div class="panel-head"><div><h2>System Architecture</h2><p>How the demo application is organized.</p></div></div><div class="arch"><div class="arch-box">🖥️<b>Web Dashboard</b><small>HTML · CSS · JS</small></div><div class="arrow">↓</div><div class="arch-box">⚙️<b>Python API Server</b><small>HTTP · JSON</small></div><div class="arrow">↓</div><div class="arch-box">☁️<b>VM Simulation Layer</b><small>Lifecycle · Metrics</small></div><div class="arrow">↓</div><div class="arch-box">▤<b>JSON Data Store</b><small>data/vms.json</small></div></div></div></section>
+<footer>Cloud VM Resource Manager <span>Academic project prototype · Simulation mode</span></footer></main>
+<div class="modal-backdrop" id="modal"><form class="modal" onsubmit="addVM(event)"><button type="button" class="close" onclick="closeModal()">×</button><p class="eyebrow">NEW INSTANCE</p><h2>Create Virtual Machine</h2><label>VM Name<input id="vmname" required maxlength="32" placeholder="e.g. App-Server-02"></label><label>Operating System<select id="os"><option>Ubuntu Linux</option><option>Windows Server</option><option>Debian Linux</option></select></label><div class="form-grid"><label>CPU Cores<input id="cores" type="number" min="1" max="32" value="2"></label><label>RAM (GB)<input id="ram" type="number" min="1" max="128" value="4"></label></div><label>Disk (GB)<input id="disk" type="number" min="10" max="2000" value="40"></label><button class="primary full" type="submit">Create VM</button></form></div>
+<div id="toast" class="toast"></div><script src="/static/app.js"></script></body></html>

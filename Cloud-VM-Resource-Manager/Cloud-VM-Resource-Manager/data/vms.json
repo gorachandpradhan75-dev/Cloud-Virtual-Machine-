@@ -1,0 +1,54 @@
+[
+  {
+    "id": "vm-001",
+    "name": "Web-Server-01",
+    "os": "Ubuntu Linux",
+    "cpu_cores": 4,
+    "ram_gb": 8,
+    "disk_gb": 80,
+    "status": "Stopped",
+    "cpu": 0,
+    "ram": 42.0,
+    "disk": 56.0,
+    "updated_at": 1792783334
+  },
+  {
+    "id": "vm-002",
+    "name": "Database-Server",
+    "os": "Ubuntu Linux",
+    "cpu_cores": 8,
+    "ram_gb": 16,
+    "disk_gb": 200,
+    "status": "Running",
+    "cpu": 68.0,
+    "ram": 73.0,
+    "disk": 62.0,
+    "updated_at": 0
+  },
+  {
+    "id": "vm-003",
+    "name": "Dev-Test-VM",
+    "os": "Windows Server",
+    "cpu_cores": 2,
+    "ram_gb": 4,
+    "disk_gb": 60,
+    "status": "Running",
+    "cpu": 0,
+    "ram": 12.0,
+    "disk": 28.0,
+    "updated_at": 1792783328
+  },
+  {
+    "id": "vm-004",
+    "name": "File-Storage-VM",
+    "os": "Ubuntu Linux",
+    "cpu_cores": 4,
+    "ram_gb": 8,
+    "disk_gb": 500,
+    "status": "Running",
+    "cpu": 12.0,
+    "ram": 28.0,
+    "disk": 81.0,
+    "updated_at": 0
+  }
+]
